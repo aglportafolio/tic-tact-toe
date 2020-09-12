@@ -1,0 +1,54 @@
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div style="text-align: center">
+<button cmat-button  (click)="presion2()" [disabled]="buttonDisabled">
+	Intentar de nuevo
+</button>
+<br>
+</div>
+<div class="container" style="animation: backwards;" >
+    <!--https://uniwebsidad.com/libros/bootstrap-3/capitulo-6/mensajes-de-alerta -->
+    <div class="alert alert-success" [hidden]="ocultarMensajeSuccess" style="text-align: center" >{{MensajeFinJuego}} </div>
+    <div class="alert alert-danger" [hidden]="ocultarMensajeDanger" style="text-align: center" >{{MensajeFinJuego}} </div>
+    <div class="alert alert-warning" [hidden]="ocultarMensajeWarning" style="text-align: center" >{{MensajeFinJuego}} </div>
+    </div>
+<div style="text-align: center" >
+<button class="btn btn-info"  (click)="presionCelda(0,0,0)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[0].getFicha()}}
+	<!--{{ArrayJugador[0]}}-->
+
+</button>
+
+<button class="btn btn-info"  (click)="presionCelda(0,1,1)" [disabled]="desahabilitarBotonJuego" >
+	{{Tablero[1].getFicha()}}
+</button>
+<button class="btn btn-info"  (click)="presionCelda(0,2,2)" [disabled]="desahabilitarBotonJuego" >
+	{{Tablero[2].getFicha()}}
+</button>
+<br>
+<button class="btn btn-info"  (click)="presionCelda(1,0,3)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[3].getFicha()}}
+</button>
+<button class="btn btn-info"  (click)="presionCelda(1,1,4)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[4].getFicha()}}
+</button>
+<button class="btn btn-info"  (click)="presionCelda(1,2,5)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[5].getFicha()}}
+</button>
+<br>
+<button class="btn btn-info"  (click)="presionCelda(2,0,6)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[6].getFicha()}}
+</button>
+<button class="btn btn-info"  (click)="presionCelda(2,1,7)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[7].getFicha()}}
+</button>
+<button class="btn btn-info"  (click)="presionCelda(2,2,8)" [disabled]="desahabilitarBotonJuego">
+	{{Tablero[8].getFicha()}}
+</button>
+</div>
+

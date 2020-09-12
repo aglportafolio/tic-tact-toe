@@ -1,0 +1,18 @@
+button.btn-info {
+  padding: 15px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  width: 70px;
+  height: 60px;
+  background: white;
+}
+button:disabled {
+  background-color: gray;
+}
+/*alert.alert-success {*/
+  .alert{
+  width:99%;
+
+}
